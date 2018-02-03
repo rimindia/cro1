@@ -1,0 +1,104 @@
+<div id="content">
+    <div class="row">
+
+        <article class="col-sm-12">
+
+            <div class="accesspolicyfrm">
+
+                <form class="accessfrm form-inline">
+
+                    <div style="text-align: center">
+                        <div class="accessinlinefrm form-group">
+                            <label>
+                                {{policyId}}
+                            </label>
+                            <input type="text" class="accessinputtxt form-control">
+                        </div>
+                        <div class="accessinlinefrm form-group">
+                            <label>
+                                {{policyName}}
+                            </label>
+                            <input type="text" class="accessinputtxt form-control"></div>
+                        <div class="accessinlinefrm form-group">
+                            <label>
+                                {{policyDescription}}
+                            </label>
+                            <input type="text" class="accessinputtxt form-control"></div>
+                    </div>
+
+                </form>
+            </div>
+        </article>
+
+        <div style="margin-top: 80px">
+            <div class="container">
+                <div class="format1">
+                    <table class="tablefmt1 table table-bordered table-striped" >
+                        <thead>
+                        <tr>
+                            <th>{{theadAction}}</th>
+                            <th>{{policyId}}</th>
+                            <th>{{policyName}}</th>
+                            <th>{{policyDescription}}</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><input id="box2" type="checkbox" /></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <span class="pluswrp" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus-circle fa-custom"></i></span>
+                <div id="myModal" class="modal fade" role="dialog">
+                    <div class="modalwrp modal-dialog modal-md">
+                        <div class=" modal-content">
+
+                            <div class="modalcls modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">{{policyDetails}}</h4>
+                            </div>
+                            <div class="modal-body">
+
+                                <form class="smart-form ng-untouched ng-pristine ng-valid" id="checkout-form" novalidate="novalidate">
+                                    <fieldset class="fldstwrp">
+                                        <div class="row">
+                                            <div class="btnrw"> <button (click)="onArticleFormSubmit()" class="btnnw btn btn-primary" >
+                                                Save
+                                            </button>
+                                                <button (click)="clear()" class="btnnw btn btn-primary" >
+                                                    Clear
+                                                </button>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="flt col-md-6">
+                                                    <div class="frmgrp form-group">
+                                                        <input type="text" pattern="[a-zA-Z .\s]+" required="" [(ngModel)]="accessPolicy.policyId" name="policyId" placeholder={{policyId}} class="frmctrl form-control">
+                                                    </div>
+                                                    <div class="frmgrp form-group">
+                                                        <input type="text" pattern="[a-zA-Z .\s]+" required="" [(ngModel)]="accessPolicy.policyName" name="policyName" placeholder={{policyName}} class="frmctrl form-control">
+                                                    </div>
+                                                    <div class="frmgrp form-group">
+                                                        <input type="text" pattern="[a-zA-Z .\s]+" required="" [(ngModel)]="accessPolicy.policyDescription" name="policyDescription" placeholder={{policyDescription}} class="frmctrl form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
