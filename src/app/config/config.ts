@@ -1,5 +1,23 @@
 export let config={
 
+    /*user module*/
+    username : 'User Name',
+    password : 'Password',
+    firstName : 'First Name',
+    lastName : 'Last Name',
+    description : 'Description',
+    mobileNumber : 'Mobile',
+    accountStatus : 'Account Status',
+    postalCode : 'Postal Code',
+    reportingTo : 'Reporting To',
+    city : 'City',
+    state : 'State',
+    country : 'Country',
+    role : 'Role',
+    lfsStore : 'LFS',
+    lfsstoreCluster : 'LFS Cluster',
+
+
     /*LFS Management*/
     lfsStoreCode : 'LFS Store Code',
     lfsStoreName : 'LFS Store Name',
@@ -40,5 +58,7 @@ export let config={
     policyName : 'Access Policy Name',
     policyDescription : 'Description',
     policyDetails : 'Access Policy Details',
+
+
 
 }

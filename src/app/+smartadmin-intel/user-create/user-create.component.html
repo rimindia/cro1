@@ -27,86 +27,105 @@
             <div class="row">
               <section class="col col-6">
                 <label class="input"> <i class="icon-prepend fa fa-user"></i>
-                  <input placeholder="User Name" type="text">
+                  <input placeholder="User Name" type="text" [(ngModel)]="user.username" name="username" placeholder={{username}}>
                 </label>
               </section>
               <section class="col col-6">
                 <label class="input"> <i class="icon-prepend fa fa-user"></i>
-                  <input placeholder="Password" type="text">
+                  <input placeholder="Password" type="text" [(ngModel)]="user.password" name="password">
                 </label>
               </section>
               <section class="col col-6">
                 <label class="input"> <i class="icon-prepend fa fa-user"></i>
-                  <input placeholder="Role" type="text">
+                  <input placeholder="Role" type="text" [(ngModel)]="user.role.roleId" name="role.roleId">
                 </label>
               </section>
               <section class="col col-6">
                 <label class="input"> <i class="icon-prepend fa fa-user"></i>
-                  <input placeholder="First Name" type="text">
+                  <input placeholder="First Name" type="text" [(ngModel)]="user.firstName" name="firstName">
                 </label>
               </section>
               <section class="col col-6">
                 <label class="input"> <i class="icon-prepend fa fa-user"></i>
-                  <input placeholder="Last Name" type="text">
+                  <input placeholder="Last Name" type="text" [(ngModel)]="user.lastName" name="lastName">
                 </label>
               </section>
               <section class="col col-6">
                 <label class="input"> <i class="icon-prepend fa fa-user"></i>
-                  <input placeholder="Description" type="text">
+                  <input placeholder="Description" type="text" [(ngModel)]="user.description" name="description">
+                </label>
+              </section>
+             <!-- <section class="col col-6">
+                <label class="input"> <i class="icon-prepend fa fa-user"></i>
+                  <input placeholder="Mobile" type="text" [(ngModel)]="user.password" name="password">
+                </label>
+              </section>-->
+              <section class="col col-6">
+                <label class="input">
+                  <!--<input placeholder="Account Status" type="text">-->
+                  <select name="Reporting To">
+                    <option value="tl">Active</option>
+                    <option value="cs">Inactive</option>
+                  </select>
+                </label>
+              </section>
+              <section class="col col-6">
+                <label class="input">
+                  <!--<input placeholder="Reporting To" type="text">-->
+                  <select name="Reporting To">
+                    <option value=" "> </option>
+                    <option value="tl">TL</option>
+                    <option value="cs">CS</option>
+                    <option value="m">M</option>
+                    <option value="sm">SM</option>
+                    <option value="nsm">NSM</option>
+                    <option value="hod">HOD</option>
+                  </select>
                 </label>
               </section>
               <section class="col col-6">
                 <label class="input"> <i class="icon-prepend fa fa-user"></i>
-                  <input placeholder="Mobile" type="text">
+                  <input placeholder="Address" type="text" [(ngModel)]="user.address" name="address">
                 </label>
               </section>
               <section class="col col-6">
                 <label class="input"> <i class="icon-prepend fa fa-user"></i>
-                  <input placeholder="Account Status" type="text">
+                  <input placeholder="E-mail" type="text" [(ngModel)]="user.emailID" name="emailID">
                 </label>
               </section>
               <section class="col col-6">
                 <label class="input"> <i class="icon-prepend fa fa-user"></i>
-                  <input placeholder="Reporting To" type="text">
+                  <input placeholder="City" type="text" [(ngModel)]="user.city" name="city">
                 </label>
               </section>
               <section class="col col-6">
                 <label class="input"> <i class="icon-prepend fa fa-user"></i>
-                  <input placeholder="Address" type="text">
+                  <input placeholder="State" type="text" [(ngModel)]="user.state" name="state">
                 </label>
               </section>
               <section class="col col-6">
                 <label class="input"> <i class="icon-prepend fa fa-user"></i>
-                  <input placeholder="E-mail" type="text">
+                  <input placeholder="Postal Code" type="text" [(ngModel)]="user.postalCode" name="postalCode">
                 </label>
               </section>
               <section class="col col-6">
                 <label class="input"> <i class="icon-prepend fa fa-user"></i>
-                  <input placeholder="City" type="text">
+                  <input placeholder="Phone" type="text" [(ngModel)]="user.phoneNumber" name="phoneNumber">
                 </label>
               </section>
               <section class="col col-6">
                 <label class="input"> <i class="icon-prepend fa fa-user"></i>
-                  <input placeholder="State" type="text">
+                  <input placeholder="Country" type="text" [(ngModel)]="user.country" name="country">
                 </label>
               </section>
               <section class="col col-6">
                 <label class="input"> <i class="icon-prepend fa fa-user"></i>
-                  <input placeholder="Postal Code" type="text">
+                  <input placeholder="LFS" type="text" [(ngModel)]="user.lfsStore.lfsStoreId" name="lfsStore.lfsStoreId">
                 </label>
               </section>
-              <section class="col col-6">
-                <label class="input"> <i class="icon-prepend fa fa-user"></i>
-                  <input placeholder="Phone" type="text">
-                </label>
-              </section>
-              <section class="col col-6">
-                <label class="input"> <i class="icon-prepend fa fa-user"></i>
-                  <input placeholder="Country" type="text">
-                </label>
-              </section><br><br><br>
 
-              <h4>
+
+              <!--<h4>
                 Note : <br>&nbsp;&nbsp;&nbsp;Account Status – should contain Active & Inactive Status.<br>
                 &nbsp;&nbsp;&nbsp;Reporting To  -  should show only users after T L ,C S, M,S M, NSM & HOD.<br>
                 &nbsp;&nbsp;&nbsp;Role -  A lookup should show in which roles can be selected.<br>
@@ -115,13 +134,13 @@
                 &nbsp;&nbsp;&nbsp;Address & Description – Should accept all the characters with special characters.<br>
                 &nbsp;&nbsp;&nbsp;Email ID – Should accept alphanumeric & special characters.
 
-              </h4>
+              </h4>-->
             </div>
           </fieldset>
 
 
           <footer>
-            <button class="btn btn-primary" >
+            <button class="btn btn-primary" (click)="onUserFormSubmit()">
               Save
             </button>
             <button class="btn btn-default" class="btn btn-primary" type="button">

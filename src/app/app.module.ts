@@ -24,6 +24,7 @@ import {SmartadminLayoutModule} from "./shared/layout/layout.module";
 import { NgxDatatableCaseComponent } from './ngx-datatable-case/ngx-datatable-case.component';
 
 import { SessionStorageService } from '../app/services/session-storage.service'
+import {UserService} from "./+smartadmin-intel/user.service";
 
 
 // Application wide providers
@@ -65,6 +66,7 @@ type StoreType = {
     // ENV_PROVIDERS,
       APP_PROVIDERS,
       AccessPolicyService,
+      UserService,
       SessionStorageService,
       {
         provide: HTTP_INTERCEPTORS,

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {FadeInTop} from "../../shared/animations/fade-in-top.decorator";
 import {Router, RouterModule} from "@angular/router";
+import { config } from "../../config/config";
+
 
 @FadeInTop()
 @Component({
@@ -19,4 +21,7 @@ export class UserComponent implements OnInit {
         console.log("create Users Page");
         this.router.navigate(['/smartadmin/userCreate']);
     }
+
+
+
 }
